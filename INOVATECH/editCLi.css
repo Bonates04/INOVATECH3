@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: solid #ffffff;  
+}
+
+.form {
+    color: white;
+    background-color: rgba(33,36,41,255);
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 15px;
+    border-radius: 15px;
+    width: 30%;
+}
+
+div#borda a#login1 {
+    color: white;
+    background-color: rgba(33,36,41,255);
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 15px;
+    border-radius: 15px;
+    width: 30%;
+}
+
+div#borda a#login1 {
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 1px;
+}
+
+.inputBox{
+    position: relative;
+}
+
+.labelInput{
+    position: relative;
+    top: -5px;
+    border: none;
+
+    pointer-events: none;
+    transition: .5s;
+}
+
+fieldset{
+    border: 3px solid #2c4278;
+}
+
+legend{
+    border: 2px solid #2c4278;
+    padding: 10px;
+    text-align: center;
+    background-color: #2c4278;
+    border-radius: 8px;
+}

@@ -1,0 +1,250 @@
+@charset "UTF-8";
+
+div#borda {
+    background-color:#222222;
+    color: rgb(202, 187, 187);
+    padding: -10Px;
+    margin: -19px -8px auto -10px;
+}
+
+div#borda nav#borda-login-cadastro {
+    display: block;
+}
+
+div#borda nav#borda-login-cadastro ul{
+    list-style: none;
+    text-transform: uppercase;
+    position: relative;
+    left: 1130px;
+    
+}
+div#borda nav#borda-login-cadastro li#login {   
+    display: inline-block;
+    background-color: #222222;
+    padding: 10px;
+    margin: 2px;
+    transition-duration: 0.5s;
+}
+
+div#borda nav#borda-login-cadastro a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+div#borda nav#borda-login-cadastro h2 {
+    font-size: 13px;
+}
+
+div#borda nav#borda-login-cadastro li#login:hover {
+    background-color: black
+}
+
+div#borda nav#borda-login-cadastro a:hover {
+    color: white;
+}
+
+div#borda-inferior {
+    background-color:#1d1c1c;
+    color: rgb(202, 187, 187);
+    padding: 70px;
+    margin: auto -8px -9px -10px;
+}
+
+div#borda nav#borda-login-cadastro {
+    display: block;
+}
+
+div#borda nav#borda-login-cadastro ul#cadastro{
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: -20px;
+    left: 1190px;
+    
+}
+div#borda nav#borda-login-cadastro li {   
+    display: inline-block;
+    background-color: #222222;
+    padding: 10px;
+    margin: 2px;
+    transition-duration: 0.5s;
+}
+
+div#borda nav#borda-login-cadastro a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+div#borda nav#borda-login-cadastro h2 {
+    font-size: 13px;
+}
+
+div#borda nav#borda-login-cadastro li:hover {
+    background-color: black
+}
+
+div#borda nav#borda-login-cadastro a:hover {
+    color: white;
+}
+
+
+
+/*div#borda input#cadastro {
+    position: absolute;
+    background-color: #222222;
+    margin-top: -20px;
+    margin-left: 1245px;
+    color:rgb(202, 187, 187) ;
+    block-size: 42px;
+}
+
+div#borda input#login {
+    position: absolute;
+    background-color: #222222;
+    margin-top: -20px;
+    margin-left: 1200px;
+    color:rgb(202, 187, 187) ;
+    block-size: 42px;
+}*/
+
+div#banner-position img#banner {
+    margin: 50px 0px 50px 85px;
+    border: 2px solid #7293c4;
+}
+
+/* Formatação Menu */
+
+nav#menu {
+    display: block;
+}
+
+nav#menu ul {
+    list-style: none;
+    text-transform: uppercase;
+    position: relative;
+    left: 333px;
+}
+nav#menu li {
+    display: inline-block;
+    background-color: #7a9dd1;
+    padding: 10px;
+    margin: 2px;
+    transition-duration: 0.5s;
+}
+
+nav#menu li:hover {
+    background-color: rgb(150, 214, 206);
+}
+
+nav#menu a {
+    color: white;
+    text-decoration: none;
+}
+
+nav#menu a:hover {
+    color: black;
+}
+
+div#borda-menu {
+    background-color:#7a9dd1;
+    padding: -30px;
+    margin: -9px 67px auto 84px;
+    position: relative
+}
+
+nav#menu a h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+div#pesquisa h2 {
+    margin-left: 84px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div#pesquisa input#pesquisa1{
+    position: relative;
+    top: -43px;
+    left: 260px
+}
+
+div#pesquisa input#pesquisa2 {
+    position: relative;
+    top: -43px;
+    left: 260px
+}
+
+div#categoria input#categorias {
+    border-radius: 20px;
+    background-color: #7a9dd1;
+    border-color: #7a9dd1;
+    block-size: 40px;
+    width: 100px;
+    margin-left: 612px;
+    
+}
+
+div#categoria input#categorias:hover {
+    transform: scale(1.02);
+}
+
+div#fotos img#um {
+    margin: 50px 0px 0px 100px ;
+    border: 1.5px solid #7293c4;
+}
+
+div#fotos img#dois {
+    margin: 50px 0px 0px 72px ;
+    border: 1.5px solid #7293c4;
+}
+
+div#fotos img#tres {
+    margin: 50px 0px 0px 70px ;
+    border: 1.5px solid #7293c4;
+}
+
+div#fotos img#quatro {
+    margin: 55px 0px 0px 100px ;
+    border: 1.5px solid #7293c4;
+}
+
+div#fotos img#cinco {
+    margin: 55px 0px 0px 72px ;
+    border: 1.5px solid #7293c4;
+}
+
+div#fotos img#seis {
+    margin: 55px 0px 0px 70px ;
+    border: 1.5px solid #7293c4;
+}
+
+div#fotos img#sete {
+    margin: 60px 0px 0px 100px ;
+    border: 1.5px solid #7293c4;
+}
+
+div#fotos img#oito {
+    margin: 60px 0px 0px 72px ;
+    border: 1.5px solid #7293c4;
+}
+
+div#fotos img#nove {
+    margin: 60px 0px 0px 70px ;
+    border: 1.5px solid #7293c4;
+}
+
+div#fotos img#dez {
+    margin: 65px 0px 0px 100px ;
+    border: 1.5px solid #7293c4;
+}
+
+div#fotos img#onze {
+    margin: 65px 0px 0px 72px ;
+    border: 1.5px solid #7293c4;
+}
+
+div#fotos img#doze {
+    margin: 65px 0px 0px 70px ;
+    border: 1.5px solid #7293c4;
+}
+

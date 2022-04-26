@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script th:src="@{/js/valida-cep.js}"></script>
+    <script th:src="@{/js/verificar-campos.js}"></script>
+    <script src="../../static/js/verificar-campos.js"></script>
+    <link rel="stylesheet" href="editCLi.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <img th:src="@{/images/logo_paraiso.jpg}" id="logo">
+    
+    <div class="form">
+        <form method="post" th:object="${membro}" enctype="multipart/form-data">
+
+            <fieldset>
+
+                <legend>
+                    <b th:text="${membro.id == null ? 'Criar Conta':'Editar Conta'}">Criar Conta</b>
+                    <br>
+                </legend>
+
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+
+            <input type="hidden" name="id" th:field="*{id}">
+            
+            <br> <br>
+            
+            <div class="inputBox">
+                <label for="nome" class="labelInput">Nome:</label>
+                <input type="text" placeholder=" Nome Completo" th:field="*{nome}" id="nome" class="inputUser" required> 
+            </div>
+            
+            <br><br><br>
+            
+            <label for="nmembro" class="labelInput">Número:</label>
+            <input type="text" placeholder=" Número de Telefone" th:field="*{numero}" id="tel" class="inputUser" required>
+            
+            <br><br><br>
+            
+            <label for="email" class="labelInput">Email:</label>
+            <input type="email" size="40" placeholder=" Endereço de Email" th:field="*{email}" id="email" class="inputUser" required>
+            
+            <br><br><br>
+            
+            <label for="senha" th:if="${logado == null || logado.id == membro.id}" class="labelInput">Senha:</label>
+            <input th:type="${logado == null || logado.id == membro.id ? 'password':'hidden'}" placeholder=" No mínimo 8 caracteres" th:field="*{senha}" id="senha" class="inputUser" required>
+            
+            <br><br><br>
+            
+            <label for="data" >Data de Nascimento:</label>
+            <input type="date" name="data" id="data" th:field="*{dataNasc}" class="inputUser" required>
+            <label for="adm"  th:if="${logado != null && logado.adm == true}">Admnistrador?</label>
+            <select name="adm" id="adm" th:field="*{adm}" th:if="${logado != null && logado.adm == true}">
+                <option value="true">Sim</option>
+                <option value="false">não</option>
+            </select>
+            
+            <br><br><br>
+            
+            <label for="foto">Foto de perfil:</label>
+            <input type="file" id="foto" name="file" style="display: none;" class="labelInput" onchange="displayNome(this)" accept=".jpg">
+            <br>
+            <button class="botoes2"><label for="foto">Upload</label></button>
+            <input type="text" disabled id="nomeFoto" class="inputUser" placeholder="Nome do arquivo">
+
+
+            <br><br><br>
+
+            <label for="cep" class="labelInput">CEP:</label>
+            <input type="text" size="10" placeholder=" 00000-000" id="cep" onblur="pesquisacep(this.value);" th:field="*{cep}" class="inputUser" required>
+            
+            <br><br><br>
+            
+            <label for="uf" class="labelInput">Estado:</label>
+            <input type="text" id="uf" th:field="*{estado}" class="inputUser" required>
+            
+            <br><br><br>
+            
+            <label for="cidade" class="labelInput">Cidade:</label>
+            <input type="text" id="cidade" th:field="*{cidade}" class="inputUser" required>
+            
+            <br><br><br>
+            
+            <label for="bairro" class="labelInput">Bairro:</label>
+            <input type="text" id="bairro" th:field="*{bairro}" class="inputUser" required>
+            
+            <br><br><br>
+            
+            <label for="rua" class="labelInput">Rua:</label>
+            <input type="text" id="rua" size="30" placeholder=" Logradouro" th:field="*{logradouro}" class="inputUser" required>
+            
+            <br><br><br>
+            
+            <label for="num" class="labelInput">N°:</label>
+            <input type="text" size="5" placeholder=" Número" th:field="*{numeroEnd}" id="numero" class="inputUser" required>
+            
+            <br><br><br>
+            
+            <label for="comp" class="labelInput">Complemento:</label>
+            <input type="text" size="20" placeholder=" Andar, Apartamento, Bloco" th:field="*{complemento}" class="inputUser" required>
+            
+            <br><br>
+            
+            <input type="button" class="botoes" value="Voltar" onclick="window.history.back()"> &nbsp; &nbsp;
+            <input type="submit" class="botoes" th:value="Cadastrar">
+            <br>
+            </fieldset>
+        </form>
+
+    </div>
+
+</body>
+
+<script>
+    function displayNome(file){
+        let arquivo = file.files[0]
+        document.getElementById("nomeFoto").value = arquivo.name
+    }
+</script>
+
+</html>
